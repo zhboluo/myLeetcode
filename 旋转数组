@@ -1,0 +1,18 @@
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+         k=k%nums.size();int n=nums.size();
+        revector(nums,n-k,n-1);
+        revector(nums,0,n-k-1);
+        revector(nums,0,n-1);
+ 
+    }
+    void revector(vector<int>& nums,int b,int e)
+    {
+            for(int i=b;i<=(b+e)/2;i++)
+            {
+                swap(nums[i],nums[b+e-i]);
+            }
+    }
+  
+};
