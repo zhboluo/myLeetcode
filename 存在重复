@@ -1,0 +1,13 @@
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        set<int>m;
+        for(int i=0;i<nums.size();i++)
+        {
+            m.insert(nums[i]);
+        }
+        return m.size()!=nums.size();
+    }
+};
+
+复习set的知识点
